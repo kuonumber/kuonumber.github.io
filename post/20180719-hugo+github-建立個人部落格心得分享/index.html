@@ -13,10 +13,26 @@
   
   
   
-  <meta name="description" content="Data scientist">
+    
+      
+    
+  
+  <meta name="description" content="20180719 Hugo&#43;github 建立個人部落格心得分享 如果想要自己架網頁，可是沒有錢買網路主機，利用Github &#43; Hugo絕對是你第一個選項！
+因為很多人寫分享文，所以我直接留下連結，請大家按照步驟完成即可，這篇文章主要分享採雷過程。
+基礎教學網頁： * 在 GitHub 部署 Hugo 靜態網站 * 此文採用的Theme - academic
+注意：一切以這主題為出發點  第一個雷：我用的主題(theme)與部落格主範例不一樣，一開始無論如何我的文章都無法順利的render出來，後來發現不是檔案問題，而是路徑問題或者更明確的說是資料夾名稱問題。Hugo quickstart官方文件有一段 &ldquo;hugo new posts/my-first-post.md&rdquo; 生成文章的語法，但是在很多的主題中，他指定的資料夾是&rdquo;post/&ldquo;，一個字的差別就會讓你debug到哭. 解法
+ 第二個雷：沒有將主題必要的資料複製到Hugo專案中，網頁肯定沒辦法正常render。
+ 解法：將想採用的主題中的static和layouts 直接取代Hugo專案根目錄中的同名資料夾（static和layouts）
+ 第三個雷：明明教學頁面有好多Menu可以點選，我的為什麼無法正常連結。
+ 解法：content 資料夾要產生對應的資料夾名稱，比如說 post的按鈕就要對應產生&rdquo;post資料夾&rdquo;，且指定路徑為/post/，請以此類推。
+ 第四個雷:記得命名repository為{你想要名字}.github.io，不然一輩子也不會變成github page..
+ Hugo強大之處在於即時查看修改的結果，但改config檔有時候local server沒即時更改結果， 試試看斷線重啟server，或許可以有好的結果。
+  加入評論功能 本文採用Disqus : 還有其他可以選擇
+Hugo Comments 官方設定教學
+ 第一個雷： 我明明在toml檔中加入&rdquo; disqusShortname = &ldquo;yourdiscussshortname&rdquo; &ldquo;，可是還是沒有留言框出現，鑲嵌出了問題怎辦？ 解法：進入你的disquz帳號-&gt;選取setting-&gt;installation-&gt;點選如下圖連結 會產生以下程式碼，並將之複製且覆蓋hugo專案的layouts/partials/comments.html中，即可以解決此問題。   提醒：各個主題通常會有exampleSite的說明範例，務必詳細閱讀，因為每個的規則都不太一樣，所以此文可能只能解決這主題的問題。">
 
   
-  <link rel="alternate" hreflang="en-us" href="/post/">
+  <link rel="alternate" hreflang="en-us" href="/post/20180719-hugo&#43;github-%E5%BB%BA%E7%AB%8B%E5%80%8B%E4%BA%BA%E9%83%A8%E8%90%BD%E6%A0%BC%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB/">
 
   
 
@@ -32,6 +48,13 @@
   
     
   
+  
+    
+    
+      
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+      
+    
   
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
@@ -66,15 +89,15 @@
   
 
   
-  <link rel="alternate" href="/post/index.xml" type="application/rss+xml" title="kuo&#39;s blog">
-  <link rel="feed" href="/post/index.xml" type="application/rss+xml" title="kuo&#39;s blog">
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="kuo&#39;s blog">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="kuo&#39;s blog">
   
 
   <link rel="manifest" href="/site.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/post/">
+  <link rel="canonical" href="/post/20180719-hugo&#43;github-%E5%BB%BA%E7%AB%8B%E5%80%8B%E4%BA%BA%E9%83%A8%E8%90%BD%E6%A0%BC%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB/">
 
   <meta property="twitter:card" content="summary_large_image">
   
@@ -82,19 +105,32 @@
   <meta property="twitter:creator" content="@https://twitter.com/kuonumber">
   
   <meta property="og:site_name" content="kuo&#39;s blog">
-  <meta property="og:url" content="/post/">
-  <meta property="og:title" content="Posts | kuo&#39;s blog">
-  <meta property="og:description" content="Data scientist">
+  <meta property="og:url" content="/post/20180719-hugo&#43;github-%E5%BB%BA%E7%AB%8B%E5%80%8B%E4%BA%BA%E9%83%A8%E8%90%BD%E6%A0%BC%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB/">
+  <meta property="og:title" content=" | kuo&#39;s blog">
+  <meta property="og:description" content="20180719 Hugo&#43;github 建立個人部落格心得分享 如果想要自己架網頁，可是沒有錢買網路主機，利用Github &#43; Hugo絕對是你第一個選項！
+因為很多人寫分享文，所以我直接留下連結，請大家按照步驟完成即可，這篇文章主要分享採雷過程。
+基礎教學網頁： * 在 GitHub 部署 Hugo 靜態網站 * 此文採用的Theme - academic
+注意：一切以這主題為出發點  第一個雷：我用的主題(theme)與部落格主範例不一樣，一開始無論如何我的文章都無法順利的render出來，後來發現不是檔案問題，而是路徑問題或者更明確的說是資料夾名稱問題。Hugo quickstart官方文件有一段 &ldquo;hugo new posts/my-first-post.md&rdquo; 生成文章的語法，但是在很多的主題中，他指定的資料夾是&rdquo;post/&ldquo;，一個字的差別就會讓你debug到哭. 解法
+ 第二個雷：沒有將主題必要的資料複製到Hugo專案中，網頁肯定沒辦法正常render。
+ 解法：將想採用的主題中的static和layouts 直接取代Hugo專案根目錄中的同名資料夾（static和layouts）
+ 第三個雷：明明教學頁面有好多Menu可以點選，我的為什麼無法正常連結。
+ 解法：content 資料夾要產生對應的資料夾名稱，比如說 post的按鈕就要對應產生&rdquo;post資料夾&rdquo;，且指定路徑為/post/，請以此類推。
+ 第四個雷:記得命名repository為{你想要名字}.github.io，不然一輩子也不會變成github page..
+ Hugo強大之處在於即時查看修改的結果，但改config檔有時候local server沒即時更改結果， 試試看斷線重啟server，或許可以有好的結果。
+  加入評論功能 本文採用Disqus : 還有其他可以選擇
+Hugo Comments 官方設定教學
+ 第一個雷： 我明明在toml檔中加入&rdquo; disqusShortname = &ldquo;yourdiscussshortname&rdquo; &ldquo;，可是還是沒有留言框出現，鑲嵌出了問題怎辦？ 解法：進入你的disquz帳號-&gt;選取setting-&gt;installation-&gt;點選如下圖連結 會產生以下程式碼，並將之複製且覆蓋hugo專案的layouts/partials/comments.html中，即可以解決此問題。   提醒：各個主題通常會有exampleSite的說明範例，務必詳細閱讀，因為每個的規則都不太一樣，所以此文可能只能解決這主題的問題。">
   <meta property="og:locale" content="en-us">
   
-  <meta property="og:updated_time" content="2017-01-01T00:00:00&#43;08:00">
+  
+  
   
 
   
 
   
 
-  <title>Posts | kuo&#39;s blog</title>
+  <title> | kuo&#39;s blog</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
@@ -190,157 +226,15 @@
 </nav>
 
 
-
-
-
-<div class="universal-wrapper">
-
-  <h1>Posts</h1>
+<article class="article" itemscope itemtype="http://schema.org/Article">
 
   
 
-  
-  
-    
-    
-      
 
-<div class="card-simple" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-  
-
-<div class="article-metadata">
-
-  
-
-  <span class="article-date">
-    
-    <meta content="2018-07-19 11:53:55 &#43;0800 CST" itemprop="datePublished">
-    <time datetime="2018-07-19 11:53:55 &#43;0800 CST" itemprop="dateModified">
-      Jul 19, 2018
-    </time>
-  </span>
-  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Jimmy,Kuo">
-  </span>
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    0 min read
-  </span>
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <a href="/post/my-article-name/#disqus_thread"></a>
-  
-
-  
-  
-  
-  
-
-  
-
-</div>
-
-
-  
-  
-  <h3 class="article-title" itemprop="headline">
-    <a href="/post/my-article-name/" itemprop="url">My Article Name</a>
-  </h3>
-  <div class="article-style" itemprop="articleBody">
-    
-    
-    
-  </div>
-  <p class="read-more" itemprop="mainEntityOfPage">
-    <a href="/post/my-article-name/" class="btn btn-primary btn-outline">
-      CONTINUE READING
-    </a>
-  </p>
-</div>
+  <div class="article-container">
+    <h1 itemprop="name"></h1>
 
     
-  
-    
-    
-      
-
-<div class="card-simple" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-  
-
-<div class="article-metadata">
-
-  
-
-  <span class="article-date">
-    
-        Last updated on
-    
-    <meta content="2016-04-20 00:00:00 &#43;0800 CST" itemprop="datePublished">
-    <time datetime="2018-01-13 00:00:00 &#43;0800 CST" itemprop="dateModified">
-      Jan 13, 2018
-    </time>
-  </span>
-  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Jimmy,Kuo">
-  </span>
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    3 min read
-  </span>
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <a href="/post/getting-started/#disqus_thread"></a>
-  
-
-  
-
-  
-
-</div>
-
-
-  
-  
-  <a href="/post/getting-started/">
-    
-    
-      <img src="/img/headers/getting-started.png" class="article-banner" itemprop="image">
-    
-  </a>
-  
-  <h3 class="article-title" itemprop="headline">
-    <a href="/post/getting-started/" itemprop="url">Academic: the website designer for Hugo</a>
-  </h3>
-  <div class="article-style" itemprop="articleBody">
-    
-    <p>Create a beautifully simple website or blog in under 10 minutes.</p>
-    
-  </div>
-  <p class="read-more" itemprop="mainEntityOfPage">
-    <a href="/post/getting-started/" class="btn btn-primary btn-outline">
-      CONTINUE READING
-    </a>
-  </p>
-</div>
-
-    
-  
-    
-    
-      
-
-<div class="card-simple" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-  
 
 <div class="article-metadata">
 
@@ -373,18 +267,54 @@
   
 
   
-
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=&amp;url=%2fpost%2f20180719-hugo%2bgithub-%25E5%25BB%25BA%25E7%25AB%258B%25E5%2580%258B%25E4%25BA%25BA%25E9%2583%25A8%25E8%2590%25BD%25E6%25A0%25BC%25E5%25BF%2583%25E5%25BE%2597%25E5%2588%2586%25E4%25BA%25AB%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2f20180719-hugo%2bgithub-%25E5%25BB%25BA%25E7%25AB%258B%25E5%2580%258B%25E4%25BA%25BA%25E9%2583%25A8%25E8%2590%25BD%25E6%25A0%25BC%25E5%25BF%2583%25E5%25BE%2597%25E5%2588%2586%25E4%25BA%25AB%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2f20180719-hugo%2bgithub-%25E5%25BB%25BA%25E7%25AB%258B%25E5%2580%258B%25E4%25BA%25BA%25E9%2583%25A8%25E8%2590%25BD%25E6%25A0%25BC%25E5%25BF%2583%25E5%25BE%2597%25E5%2588%2586%25E4%25BA%25AB%2f&amp;title="
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2f20180719-hugo%2bgithub-%25E5%25BB%25BA%25E7%25AB%258B%25E5%2580%258B%25E4%25BA%25BA%25E9%2583%25A8%25E8%2590%25BD%25E6%25A0%25BC%25E5%25BF%2583%25E5%25BE%2597%25E5%2588%2586%25E4%25BA%25AB%2f&amp;title="
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=&amp;body=%2fpost%2f20180719-hugo%2bgithub-%25E5%25BB%25BA%25E7%25AB%258B%25E5%2580%258B%25E4%25BA%25BA%25E9%2583%25A8%25E8%2590%25BD%25E6%25A0%25BC%25E5%25BF%2583%25E5%25BE%2597%25E5%2588%2586%25E4%25BA%25AB%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
 </div>
 
 
   
-  
-  <h3 class="article-title" itemprop="headline">
-    <a href="/post/20180719-hugo&#43;github-%E5%BB%BA%E7%AB%8B%E5%80%8B%E4%BA%BA%E9%83%A8%E8%90%BD%E6%A0%BC%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB/" itemprop="url"></a>
-  </h3>
-  <div class="article-style" itemprop="articleBody">
-    
-    
+
+</div>
+
+
+    <div class="article-style" itemprop="articleBody">
+      
 
 <h1 id="20180719-hugo-github-建立個人部落格心得分享">20180719 Hugo+github 建立個人部落格心得分享</h1>
 
@@ -434,22 +364,36 @@
 
 <p>提醒：各個主題通常會有exampleSite的說明範例，務必詳細閱讀，因為每個的規則都不太一樣，所以此文可能只能解決這主題的問題。</p>
 
+    </div>
+
     
+
+
+    
+    
+
+    
+
+    <div id="disqus_thread"></div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://kuonumber.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
   </div>
-  <p class="read-more" itemprop="mainEntityOfPage">
-    <a href="/post/20180719-hugo&#43;github-%E5%BB%BA%E7%AB%8B%E5%80%8B%E4%BA%BA%E9%83%A8%E8%90%BD%E6%A0%BC%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB/" class="btn btn-primary btn-outline">
-      CONTINUE READING
-    </a>
-  </p>
-</div>
+</article>
 
-    
-  
-
-  
-
-
-</div>
 <footer class="site-footer">
   <div class="container">
 
@@ -520,6 +464,17 @@
     
 
     
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
     
 
     
