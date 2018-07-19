@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on kuo&#39;s blog</title>
-    <link>/post/</link>
-    <description>Recent content in Posts on kuo&#39;s blog</description>
+    <title>Learning notes on kuo&#39;s blog</title>
+    <link>/categories/learning-notes/</link>
+    <description>Recent content in Learning notes on kuo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 19 Jul 2018 15:00:00 +0800</lastBuildDate>
     
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/learning-notes/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -31,27 +31,6 @@
   加入評論功能 本文採用Disqus : 還有其他可以選擇
 Hugo Comments 官方設定教學
  第一個雷： 我明明在toml檔中加入&amp;rdquo; disqusShortname = &amp;ldquo;yourdiscussshortname&amp;rdquo; &amp;ldquo;，可是還是沒有留言框出現，鑲嵌出了問題怎辦？ 解法：進入你的disquz帳號-&amp;gt;選取setting-&amp;gt;installation-&amp;gt;點選如下圖連結 會產生以下程式碼，並將之複製且覆蓋hugo專案的layouts/partials/comments.html中，即可以解決此問題。   提醒：各個主題通常會有exampleSite的說明範例，務必詳細閱讀，因為每個的規則都不太一樣，所以此文可能只能解決這主題的問題。</description>
-    </item>
-    
-    <item>
-      <title>My Article Name</title>
-      <link>/post/my-article-name/</link>
-      <pubDate>Thu, 19 Jul 2018 11:53:55 +0800</pubDate>
-      
-      <guid>/post/my-article-name/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Academic: the website designer for Hugo</title>
-      <link>/post/getting-started/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +0800</pubDate>
-      
-      <guid>/post/getting-started/</guid>
-      <description>Academic is a framework to help you create a beautiful website quickly. Perfect for personal sites, blogs, or business/project sites. Check out the latest demo of what you&amp;rsquo;ll get in less than 10 minutes. Then head on over to the Quick Start guide or take a look at the Release Notes.
-
-Key features:
- Easily manage various content including homepage, blog posts, publications, talks, and projects Extensible via color themes and widgets/plugins Write in Markdown for easy formatting and code highlighting, with LaTeX for mathematical expressions Social/academic network linking, Google Analytics, and Disqus comments Responsive and mobile friendly Simple and refreshing one page design Multilingual and easy to customize  Color Themes Academic is available in different color themes and font themes.</description>
     </item>
     
   </channel>

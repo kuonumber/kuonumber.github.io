@@ -106,7 +106,7 @@ Hugo Comments 官方設定教學
   
   <meta property="og:site_name" content="kuo&#39;s blog">
   <meta property="og:url" content="/post/20180719-hugo&#43;github-%E5%BB%BA%E7%AB%8B%E5%80%8B%E4%BA%BA%E9%83%A8%E8%90%BD%E6%A0%BC%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB/">
-  <meta property="og:title" content=" | kuo&#39;s blog">
+  <meta property="og:title" content="My Article Name | kuo&#39;s blog">
   <meta property="og:description" content="20180719 Hugo&#43;github 建立個人部落格心得分享 如果想要自己架網頁，可是沒有錢買網路主機，利用Github &#43; Hugo絕對是你第一個選項！
 因為很多人寫分享文，所以我直接留下連結，請大家按照步驟完成即可，這篇文章主要分享採雷過程。
 基礎教學網頁： * 在 GitHub 部署 Hugo 靜態網站 * 此文採用的Theme - academic
@@ -119,18 +119,19 @@ Hugo Comments 官方設定教學
  Hugo強大之處在於即時查看修改的結果，但改config檔有時候local server沒即時更改結果， 試試看斷線重啟server，或許可以有好的結果。
   加入評論功能 本文採用Disqus : 還有其他可以選擇
 Hugo Comments 官方設定教學
- 第一個雷： 我明明在toml檔中加入&rdquo; disqusShortname = &ldquo;yourdiscussshortname&rdquo; &ldquo;，可是還是沒有留言框出現，鑲嵌出了問題怎辦？ 解法：進入你的disquz帳號-&gt;選取setting-&gt;installation-&gt;點選如下圖連結 會產生以下程式碼，並將之複製且覆蓋hugo專案的layouts/partials/comments.html中，即可以解決此問題。   提醒：各個主題通常會有exampleSite的說明範例，務必詳細閱讀，因為每個的規則都不太一樣，所以此文可能只能解決這主題的問題。">
+ 第一個雷： 我明明在toml檔中加入&rdquo; disqusShortname = &ldquo;yourdiscussshortname&rdquo; &ldquo;，可是還是沒有留言框出現，鑲嵌出了問題怎辦？ 解法：進入你的disquz帳號-&gt;選取setting-&gt;installation-&gt;點選如下圖連結 會產生以下程式碼，並將之複製且覆蓋hugo專案的layouts/partials/comments.html中，即可以解決此問題。   提醒：各個主題通常會有exampleSite的說明範例，務必詳細閱讀，因為每個的規則都不太一樣，所以此文可能只能解決這主題的問題。"><meta property="og:image" content="/img/static/img/disquz.png">
   <meta property="og:locale" content="en-us">
   
+  <meta property="article:published_time" content="2018-07-19T15:00:00&#43;08:00">
   
+  <meta property="article:modified_time" content="2018-07-19T15:00:00&#43;08:00">
   
+
   
 
   
 
-  
-
-  <title> | kuo&#39;s blog</title>
+  <title>My Article Name | kuo&#39;s blog</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
@@ -229,22 +230,37 @@ Hugo Comments 官方設定教學
 <article class="article" itemscope itemtype="http://schema.org/Article">
 
   
+<div class="article-header">
+  
+  
+    <img src="/img/static/img/disquz.png" class="article-banner" itemprop="image">
+  
+
+  
+</div>
+
 
 
   <div class="article-container">
-    <h1 itemprop="name"></h1>
+    <h1 itemprop="name">My Article Name</h1>
 
     
 
 <div class="article-metadata">
 
   
+  
+  <div itemprop="author">
+    Jimmy Kuo
+    
+  </div>
+  
 
   <span class="article-date">
     
-    <meta content="" itemprop="datePublished">
-    <time datetime="" itemprop="dateModified">
-      Jan 1, 0001
+    <meta content="2018-07-19 15:00:00 &#43;0800 CST" itemprop="datePublished">
+    <time datetime="2018-07-19 15:00:00 &#43;0800 CST" itemprop="dateModified">
+      Jul 19, 2018
     </time>
   </span>
   <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
@@ -265,6 +281,18 @@ Hugo Comments 官方設定教學
   
 
   
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="/categories/learning-notes/">learning notes</a
+    >
+    
+  </span>
+  
+  
 
   
   
@@ -272,7 +300,7 @@ Hugo Comments 官方設定教學
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=&amp;url=%2fpost%2f20180719-hugo%2bgithub-%25E5%25BB%25BA%25E7%25AB%258B%25E5%2580%258B%25E4%25BA%25BA%25E9%2583%25A8%25E8%2590%25BD%25E6%25A0%25BC%25E5%25BF%2583%25E5%25BE%2597%25E5%2588%2586%25E4%25BA%25AB%2f"
+         href="https://twitter.com/intent/tweet?text=My%20Article%20Name&amp;url=%2fpost%2f20180719-hugo%2bgithub-%25E5%25BB%25BA%25E7%25AB%258B%25E5%2580%258B%25E4%25BA%25BA%25E9%2583%25A8%25E8%2590%25BD%25E6%25A0%25BC%25E5%25BF%2583%25E5%25BE%2597%25E5%2588%2586%25E4%25BA%25AB%2f"
          target="_blank" rel="noopener">
         <i class="fa fa-twitter"></i>
       </a>
@@ -286,21 +314,21 @@ Hugo Comments 官方設定教學
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2f20180719-hugo%2bgithub-%25E5%25BB%25BA%25E7%25AB%258B%25E5%2580%258B%25E4%25BA%25BA%25E9%2583%25A8%25E8%2590%25BD%25E6%25A0%25BC%25E5%25BF%2583%25E5%25BE%2597%25E5%2588%2586%25E4%25BA%25AB%2f&amp;title="
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2f20180719-hugo%2bgithub-%25E5%25BB%25BA%25E7%25AB%258B%25E5%2580%258B%25E4%25BA%25BA%25E9%2583%25A8%25E8%2590%25BD%25E6%25A0%25BC%25E5%25BF%2583%25E5%25BE%2597%25E5%2588%2586%25E4%25BA%25AB%2f&amp;title=My%20Article%20Name"
          target="_blank" rel="noopener">
         <i class="fa fa-linkedin"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=%2fpost%2f20180719-hugo%2bgithub-%25E5%25BB%25BA%25E7%25AB%258B%25E5%2580%258B%25E4%25BA%25BA%25E9%2583%25A8%25E8%2590%25BD%25E6%25A0%25BC%25E5%25BF%2583%25E5%25BE%2597%25E5%2588%2586%25E4%25BA%25AB%2f&amp;title="
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2f20180719-hugo%2bgithub-%25E5%25BB%25BA%25E7%25AB%258B%25E5%2580%258B%25E4%25BA%25BA%25E9%2583%25A8%25E8%2590%25BD%25E6%25A0%25BC%25E5%25BF%2583%25E5%25BE%2597%25E5%2588%2586%25E4%25BA%25AB%2f&amp;title=My%20Article%20Name"
          target="_blank" rel="noopener">
         <i class="fa fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=&amp;body=%2fpost%2f20180719-hugo%2bgithub-%25E5%25BB%25BA%25E7%25AB%258B%25E5%2580%258B%25E4%25BA%25BA%25E9%2583%25A8%25E8%2590%25BD%25E6%25A0%25BC%25E5%25BF%2583%25E5%25BE%2597%25E5%2588%2586%25E4%25BA%25AB%2f">
+         href="mailto:?subject=My%20Article%20Name&amp;body=%2fpost%2f20180719-hugo%2bgithub-%25E5%25BB%25BA%25E7%25AB%258B%25E5%2580%258B%25E4%25BA%25BA%25E9%2583%25A8%25E8%2590%25BD%25E6%25A0%25BC%25E5%25BF%2583%25E5%25BE%2597%25E5%2588%2586%25E4%25BA%25AB%2f">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
@@ -367,6 +395,15 @@ Hugo Comments 官方設定教學
     </div>
 
     
+
+
+<div class="article-tags">
+  
+  <a class="label label-default" href="/tags/hugo/">hugo</a>
+  
+</div>
+
+
 
 
     
