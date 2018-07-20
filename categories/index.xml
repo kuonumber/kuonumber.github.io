@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on kuo&#39;s blog</title>
-    <link>/categories/</link>
+    <link>https://kuonumber.github.io/categories/</link>
     <description>Recent content in Categories on kuo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     
-	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kuonumber.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Learning notes</title>
-      <link>/categories/learning-notes/</link>
+      <link>https://kuonumber.github.io/categories/learning-notes/</link>
       <pubDate>Thu, 19 Jul 2018 15:00:00 +0800</pubDate>
       
-      <guid>/categories/learning-notes/</guid>
+      <guid>https://kuonumber.github.io/categories/learning-notes/</guid>
       <description></description>
     </item>
     
