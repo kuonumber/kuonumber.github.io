@@ -1,41 +1,63 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on kuo&#39;s blog</title>
+    <title>Tags on Hao-Chieh Kuo Blog</title>
     <link>https://kuonumber.github.io/tags/</link>
-    <description>Recent content in Tags on kuo&#39;s blog</description>
+    <description>Recent content in Tags on Hao-Chieh Kuo Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0800</lastBuildDate>
-    
-	<atom:link href="https://kuonumber.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>zh-tw</language>
+    <lastBuildDate>Tue, 29 Oct 2019 10:07:47 +0600</lastBuildDate><atom:link href="https://kuonumber.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hackathon</title>
-      <link>https://kuonumber.github.io/tags/hackathon/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0800</pubDate>
+      <title>Game</title>
+      <link>https://kuonumber.github.io/tags/game/</link>
+      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
       
-      <guid>https://kuonumber.github.io/tags/hackathon/</guid>
+      <guid>https://kuonumber.github.io/tags/game/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Hugo</title>
-      <link>https://kuonumber.github.io/tags/hugo/</link>
-      <pubDate>Thu, 19 Jul 2018 15:00:00 +0800</pubDate>
+      <title>HTML</title>
+      <link>https://kuonumber.github.io/tags/html/</link>
+      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
       
-      <guid>https://kuonumber.github.io/tags/hugo/</guid>
+      <guid>https://kuonumber.github.io/tags/html/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Machine_learning</title>
-      <link>https://kuonumber.github.io/tags/machine_learning/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0800</pubDate>
+      <title>New</title>
+      <link>https://kuonumber.github.io/tags/new/</link>
+      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
       
-      <guid>https://kuonumber.github.io/tags/machine_learning/</guid>
+      <guid>https://kuonumber.github.io/tags/new/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Photos</title>
+      <link>https://kuonumber.github.io/tags/photos/</link>
+      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
+      
+      <guid>https://kuonumber.github.io/tags/photos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://kuonumber.github.io/tags/python/</link>
+      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
+      
+      <guid>https://kuonumber.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>React</title>
+      <link>https://kuonumber.github.io/tags/react/</link>
+      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
+      
+      <guid>https://kuonumber.github.io/tags/react/</guid>
       <description></description>
     </item>
     

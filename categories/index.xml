@@ -1,22 +1,72 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on kuo&#39;s blog</title>
+    <title>Categories on Hao-Chieh Kuo Blog</title>
     <link>https://kuonumber.github.io/categories/</link>
-    <description>Recent content in Categories on kuo&#39;s blog</description>
+    <description>Recent content in Categories on Hao-Chieh Kuo Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
-    
-	<atom:link href="https://kuonumber.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    
+    <language>zh-tw</language>
+    <lastBuildDate>Tue, 29 Oct 2019 10:07:47 +0600</lastBuildDate><atom:link href="https://kuonumber.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android And Gaming</title>
+      <link>https://kuonumber.github.io/categories/android-and-gaming/</link>
+      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
+      
+      <guid>https://kuonumber.github.io/categories/android-and-gaming/</guid>
+      <description></description>
+    </item>
     
     <item>
-      <title>Learning notes</title>
-      <link>https://kuonumber.github.io/categories/learning-notes/</link>
-      <pubDate>Thu, 19 Jul 2018 15:00:00 +0800</pubDate>
+      <title>Go Language</title>
+      <link>https://kuonumber.github.io/categories/go-language/</link>
+      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
       
-      <guid>https://kuonumber.github.io/categories/learning-notes/</guid>
+      <guid>https://kuonumber.github.io/categories/go-language/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HTML</title>
+      <link>https://kuonumber.github.io/categories/html/</link>
+      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
+      
+      <guid>https://kuonumber.github.io/categories/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HTML &amp; CSS</title>
+      <link>https://kuonumber.github.io/categories/html-css/</link>
+      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
+      
+      <guid>https://kuonumber.github.io/categories/html-css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Programming Language</title>
+      <link>https://kuonumber.github.io/categories/programming-language/</link>
+      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
+      
+      <guid>https://kuonumber.github.io/categories/programming-language/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://kuonumber.github.io/categories/python/</link>
+      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
+      
+      <guid>https://kuonumber.github.io/categories/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Web Design</title>
+      <link>https://kuonumber.github.io/categories/web-design/</link>
+      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
+      
+      <guid>https://kuonumber.github.io/categories/web-design/</guid>
       <description></description>
     </item>
     
