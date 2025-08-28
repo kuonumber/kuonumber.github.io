@@ -1,540 +1,345 @@
 <!DOCTYPE html>
-<html lang="zh-tw"><head>
-  <meta charset="utf-8">
-  <title>Hao-Chieh Kuo Blog</title>
-
-  <!-- mobile responsive meta -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="this is meta description">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Blog - Kuo's Blog</title>
+  <meta name="description" content="Blog posts about data science, machine learning, and technology">
+  <meta name="keywords" content="blog, data science, machine learning, python, technology">
   <meta name="author" content="Kuo">
-  <meta name="generator" content="Hugo 0.79.0" />
+  
+  <!-- favicon -->
+  <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+  
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="/plugins/bootstrap/bootstrap.min.css">
+  <!-- themify icon -->
+  <link rel="stylesheet" href="/plugins/themify-icons/themify-icons.css">
+  <!-- venobox -->
+  <link rel="stylesheet" href="/plugins/venobox/venobox.css">
+  <!-- slick slider -->
+  <link rel="stylesheet" href="/plugins/slick/slick.css">
+  <!-- custom css -->
+  <link rel="stylesheet" href="/scss/style.min.css">
+  
+  <style>
+    .blog-card { height: 100%; display: flex; flex-direction: column; }
+    .blog-card .card { height: 100%; border: 1px solid #e9ecef; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.3s ease; }
+    .blog-card .card:hover { box-shadow: 0 4px 8px rgba(0,0,0,0.15); transform: translateY(-2px); }
+    .blog-card .card-img-top { height: 200px; object-fit: cover; border-top-left-radius: 8px; border-top-right-radius: 8px; }
+    .blog-card .card-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+    .blog-card .card-title { font-size: 1.1rem; line-height: 1.4; margin-bottom: 0.75rem; color: #2c3e50; }
+    .blog-card .card-text { flex: 1; margin-bottom: 1rem; line-height: 1.6; color: #6c757d; }
+    .blog-card .post-meta { margin-bottom: 1rem; font-size: 0.9rem; color: #6c757d; }
+    .blog-card .btn { align-self: flex-start; margin-top: auto; }
+    .blog-card .category-tag { display: inline-block; background-color: #007bff; color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem; margin-bottom: 0.75rem; text-decoration: none; }
+    .blog-card .category-tag:hover { background-color: #0056b3; color: white; text-decoration: none; }
+    @media (max-width: 768px) { .blog-card .card-body { padding: 1rem; } .blog-card .card-title { font-size: 1rem; } }
+  </style>
+</head>
 
-  <!-- plugins -->
-  
-  <link rel="stylesheet" href="https://kuonumber.github.io/plugins/bootstrap/bootstrap.min.css ">
-  
-  <link rel="stylesheet" href="https://kuonumber.github.io/plugins/slick/slick.css ">
-  
-  <link rel="stylesheet" href="https://kuonumber.github.io/plugins/themify-icons/themify-icons.css ">
-  
-  <link rel="stylesheet" href="https://kuonumber.github.io/plugins/venobox/venobox.css ">
-  
-
-  <!-- Main Stylesheet -->
-  
-  <link rel="stylesheet" href="https://kuonumber.github.io/scss/style.min.css" media="screen">
-
-  <!--Favicon-->
-  <link rel="shortcut icon" href="https://kuonumber.github.io/images/favicon.png " type="image/x-icon">
-  <link rel="icon" href="https://kuonumber.github.io/images/favicon.png " type="image/x-icon">
-
-  <!-- google analitycs -->
-  <script>
-    (function (i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r;
-      i[r] = i[r] || function () {
-        (i[r].q = i[r].q || []).push(arguments)
-      }, i[r].l = 1 * new Date();
-      a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0];
-      a.async = 1;
-      a.src = g;
-      m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-    ga('create', 'UA-186261756-1', 'auto');
-    ga('send', 'pageview');
-  </script>
-
-</head><body>
-<!-- preloader start -->
-<div class="preloader">
-  
-</div>
-<!-- preloader end -->
-<!-- navigation -->
+<body>
+  <!-- navigation -->
 <header class="navigation">
   <div class="container">
-    
-    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
-      <a class="navbar-brand mobile-view" href="https://kuonumber.github.io"><img class="img-fluid"
-          src="https://kuonumber.github.io/images/logo.png" alt="Hao-Chieh Kuo Blog"></a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-0">
+      <a class="navbar-brand" href="/">
+        <img src="/images/logo.png" alt="Kuo's Blog" class="img-fluid" width="150px">
+      </a>
       <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
-        <i class="ti-menu h3"></i>
+        <span class="ti-menu"></span>
       </button>
-
       <div class="collapse navbar-collapse text-center" id="navigation">
-        <div class="desktop-view">
-          <ul class="navbar-nav mr-auto">
-            
-            <li class="nav-item">
-              <a class="nav-link" href="#"><i class="ti-github"></i></a>
-            </li>
-            
-            <li class="nav-item">
-              <a class="nav-link" href="#"><i class="ti-linkedin"></i></a>
-            </li>
-            
-          </ul>
-        </div>
-
-        <a class="navbar-brand mx-auto desktop-view" href="https://kuonumber.github.io"><img class="img-fluid"
-            src="https://kuonumber.github.io/images/logo.png" alt="Hao-Chieh Kuo Blog"></a>
-
-        <ul class="navbar-nav">
-          
-          
+        <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="https://kuonumber.github.io/about">About</a>
+            <a class="nav-link" href="/">Home</a>
           </li>
-          
-          
-          
           <li class="nav-item">
-            <a class="nav-link" href="https://kuonumber.github.io/blog">Post</a>
+            <a class="nav-link" href="/about">About</a>
           </li>
-          
-          
-          
           <li class="nav-item">
-            <a class="nav-link" href="https://kuonumber.github.io/contact">Contact</a>
+            <a class="nav-link" href="/blog">Blog</a>
           </li>
-          
-          
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
         </ul>
-
-        
-        <!-- search -->
-        <div class="search pl-lg-4">
-          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
-          <div class="search-wrapper">
-            <form action="https://kuonumber.github.io/search" class="h-100">
-              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
-            </form>
-            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
-          </div>
-        </div>
-        
-
-        
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/kuonumber"><i class="ti-github"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.linkedin.com/in/kuohaochieh/"><i class="ti-linkedin"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://medium.com/@kuonumber"><i class="ti-world"></i></a>
+          </li>
+        </ul>
       </div>
     </nav>
   </div>
 </header>
 <!-- /navigation -->
 
-
+<!-- page title -->
 <section class="section-sm">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 mb-5 mb-lg-0">
-        <div class="row">
-          
-          
-          <div class="col-md-6 mb-4">
-    <article class="card">
-        
-        <img src="https://kuonumber.github.io/images/featured-post/post-1.jpg" class="card-img-top" alt="How To Use Checklists To Improve Your UX">
-        
-        <div class="card-body px-0">
-        
-        <a href="/categories/android-and-gaming"
-            class="text-primary">Android and gaming</a>
-        
-        <a href="https://kuonumber.github.io/blog/post-1/" class="h5 d-block my-3">How To Use Checklists To Improve Your UX</a>
-        <div class="mb-3 post-meta">
-            <span>By Kuo</span>
-            
-            <span class="border-bottom border-primary px-2 mx-1"></span>
-            <span>29 October 2019</span>
-            
-        </div>
-        <p class="card-text">Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.</p>
-        <a href="https://kuonumber.github.io/blog/post-1/" class="btn btn-outline-primary">read more</a>
-        </div>
-    </article>
-</div>
-          
-          <div class="col-md-6 mb-4">
-    <article class="card">
-        
-        <img src="https://kuonumber.github.io/images/post/post-1.jpg" class="card-img-top" alt="How To Use Checklists To Improve Your UX">
-        
-        <div class="card-body px-0">
-        
-        <a href="/categories/go-language"
-            class="text-primary">Go language</a>
-        
-        <a href="https://kuonumber.github.io/blog/post-10/" class="h5 d-block my-3">How To Use Checklists To Improve Your UX</a>
-        <div class="mb-3 post-meta">
-            <span>By Kuo</span>
-            
-            <span class="border-bottom border-primary px-2 mx-1"></span>
-            <span>29 October 2019</span>
-            
-        </div>
-        <p class="card-text">Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.</p>
-        <a href="https://kuonumber.github.io/blog/post-10/" class="btn btn-outline-primary">read more</a>
-        </div>
-    </article>
-</div>
-          
-          <div class="col-md-6 mb-4">
-    <article class="card">
-        
-        <img src="https://kuonumber.github.io/images/post/post-2.jpg" class="card-img-top" alt="How To Use Checklists To Improve Your UX">
-        
-        <div class="card-body px-0">
-        
-        <a href="/categories/go-language"
-            class="text-primary">Go language</a>
-        
-        <a href="https://kuonumber.github.io/blog/post-11/" class="h5 d-block my-3">How To Use Checklists To Improve Your UX</a>
-        <div class="mb-3 post-meta">
-            <span>By Kuo</span>
-            
-            <span class="border-bottom border-primary px-2 mx-1"></span>
-            <span>29 October 2019</span>
-            
-        </div>
-        <p class="card-text">Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.</p>
-        <a href="https://kuonumber.github.io/blog/post-11/" class="btn btn-outline-primary">read more</a>
-        </div>
-    </article>
-</div>
-          
-          <div class="col-md-6 mb-4">
-    <article class="card">
-        
-        <img src="https://kuonumber.github.io/images/post/post-3.jpg" class="card-img-top" alt="How To Use Checklists To Improve Your UX">
-        
-        <div class="card-body px-0">
-        
-        <a href="/categories/programming-language"
-            class="text-primary">Programming language</a>
-        
-        <a href="https://kuonumber.github.io/blog/post-12/" class="h5 d-block my-3">How To Use Checklists To Improve Your UX</a>
-        <div class="mb-3 post-meta">
-            <span>By Kuo</span>
-            
-            <span class="border-bottom border-primary px-2 mx-1"></span>
-            <span>29 October 2019</span>
-            
-        </div>
-        <p class="card-text">Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.</p>
-        <a href="https://kuonumber.github.io/blog/post-12/" class="btn btn-outline-primary">read more</a>
-        </div>
-    </article>
-</div>
-          
-          <div class="col-md-6 mb-4">
-    <article class="card">
-        
-        <img src="https://kuonumber.github.io/images/post/post-3.jpg" class="card-img-top" alt="How To Use Checklists To Improve Your UX">
-        
-        <div class="card-body px-0">
-        
-        <a href="/categories/go-language"
-            class="text-primary">Go language</a>
-        
-        <a href="https://kuonumber.github.io/blog/post-13/" class="h5 d-block my-3">How To Use Checklists To Improve Your UX</a>
-        <div class="mb-3 post-meta">
-            <span>By Kuo</span>
-            
-            <span class="border-bottom border-primary px-2 mx-1"></span>
-            <span>29 October 2019</span>
-            
-        </div>
-        <p class="card-text">Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.</p>
-        <a href="https://kuonumber.github.io/blog/post-13/" class="btn btn-outline-primary">read more</a>
-        </div>
-    </article>
-</div>
-          
-          <div class="col-md-6 mb-4">
-    <article class="card">
-        
-        <img src="https://kuonumber.github.io/images/featured-post/post-2.jpg" class="card-img-top" alt="How To Use Checklists To Improve Your UX">
-        
-        <div class="card-body px-0">
-        
-        <a href="/categories/html-css"
-            class="text-primary">H t m l &amp; c s s</a>
-        
-        <a href="https://kuonumber.github.io/blog/post-2/" class="h5 d-block my-3">How To Use Checklists To Improve Your UX</a>
-        <div class="mb-3 post-meta">
-            <span>By Kuo</span>
-            
-            <span class="border-bottom border-primary px-2 mx-1"></span>
-            <span>29 October 2019</span>
-            
-        </div>
-        <p class="card-text">Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.</p>
-        <a href="https://kuonumber.github.io/blog/post-2/" class="btn btn-outline-primary">read more</a>
-        </div>
-    </article>
-</div>
-          
+      <div class="col-12">
+        <div class="d-flex justify-content-between align-items-center">
+          <h1 class="font-weight-bold mb-0">Blog</h1>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Blog</li>
+            </ol>
+          </nav>
         </div>
       </div>
-      
-      <div class="col-lg-4">
-  
-  <div class="widget">
-    
-    <h4 class="widget-title">About Me</h4>
-    
-    <img src="https://kuonumber.github.io/images/author.jpg" alt=""
-      class="img-fluid author-thumb-sm d-block mx-auto rounded-circle mb-4">
-    
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-    <a href="https://kuonumber.github.io/about/" class="btn btn-outline-primary">Know More</a>
-    
+    </div>
   </div>
-  
-  <div class="widget">
-    <h4 class="widget-title">Category</h4>
-    <ul class="list-unstyled">
-      <li><a
-          href="/categories/android-and-gaming">Android and gaming</a>
-      </li>
-      <li><a
-          href="/categories/go-language">Go language</a>
-      </li>
-      <li><a
-          href="/categories/html">Html</a>
-      </li>
-      <li><a
-          href="/categories/html-css">Html css</a>
-      </li>
-      <li><a
-          href="/categories/programming-language">Programming language</a>
-      </li>
-      <li><a
-          href="/categories/python">Python</a>
-      </li>
-      <li><a
-          href="/categories/web-design">Web design</a>
-      </li>
-    </ul>
-  </div>
-  
-  <div class="widget">
-    <h4 class="widget-title">Tag</h4>
-    <ul class="list-inline">
-      <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-          href="/tags/game">Game</a></li>
-      <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-          href="/tags/html">Html</a></li>
-      <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-          href="/tags/new">New</a></li>
-      <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-          href="/tags/photos">Photos</a></li>
-      <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-          href="/tags/python">Python</a></li>
-      <li class="list-inline-item"><a class="d-block p-2 bg-primary text-white"
-          href="/tags/react">React</a></li>
-    </ul>
-  </div>
-  
-  <div class="widget">
-    <h4 class="widget-title">Social</h4>
-    <ul class="list-inline social-links">
-      
-      <li class="list-inline-item"><a href="#"><i class="ti-github"></i></a></li>
-      
-      <li class="list-inline-item"><a href="#"><i class="ti-linkedin"></i></a></li>
-      
-    </ul>
-  </div>
-  
-  <div class="widget">
-    <img src="https://kuonumber.github.io/images/promotion.png" alt="" class="img-fluid">
-  </div>
-</div>
+</section>
+<!-- /page title -->
 
-      
+<!-- blog -->
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <!-- blog post -->
+      <div class="col-lg-8 mb-5 mb-lg-0">
+        <div class="row">
 
-      
-      <div class="col-12 mt-5">
+          <div class="col-md-6 mb-4 blog-card">
+            <article class="card">
+              <img src="/images/post/post-1.jpg" class="card-img-top" alt="MacOS Notes 太陽春試試 Pronote 解鎖 進階筆記力">
+              <div class="card-body">
+                <a href="/categories/technology" class="category-tag">Technology</a>
+                <a href="/blog/MacOS-Notes-太陽春試試-Pronote-解鎖進階筆記力/" class="card-title">MacOS Notes 太陽春試試 Pronote 解鎖 進階筆記力</a>
+                <div class="post-meta">
+                  <span>By Kuo</span>
+                  <span class="border-bottom border-primary px-2 mx-1"></span>
+                  <span>August 2025</span>
+                </div>
+                <p class="card-text">Medium文章預覽 - 點擊閱讀更多查看完整內容和原文連結。</p>
+                <a href="/blog/MacOS-Notes-太陽春試試-Pronote-解鎖進階筆記力/" class="btn btn-outline-primary">read more</a>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 mb-4 blog-card">
+            <article class="card">
+              <img src="/images/post/post-2.jpg" class="card-img-top" alt="Macbook通用工具推薦">
+              <div class="card-body">
+                <a href="/categories/technology" class="category-tag">Technology</a>
+                <a href="/blog/Macbook通用工具推薦/" class="card-title">Macbook通用工具推薦</a>
+                <div class="post-meta">
+                  <span>By Kuo</span>
+                  <span class="border-bottom border-primary px-2 mx-1"></span>
+                  <span>August 2025</span>
+                </div>
+                <p class="card-text">Medium文章預覽 - 點擊閱讀更多查看完整內容和原文連結。</p>
+                <a href="/blog/Macbook通用工具推薦/" class="btn btn-outline-primary">read more</a>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 mb-4 blog-card">
+            <article class="card">
+              <img src="/images/post/post-3.jpg" class="card-img-top" alt="Run Windows on Macbook M3 pro 如何在Macbook M3上執行Windows">
+              <div class="card-body">
+                <a href="/categories/technology" class="category-tag">Technology</a>
+                <a href="/blog/Run-Windows-on-Macbook-M3-pro-如何在Macbook-M3上執行Windows/" class="card-title">Run Windows on Macbook M3 pro 如何在Macbook M3上執行Windows</a>
+                <div class="post-meta">
+                  <span>By Kuo</span>
+                  <span class="border-bottom border-primary px-2 mx-1"></span>
+                  <span>August 2025</span>
+                </div>
+                <p class="card-text">Medium文章預覽 - 點擊閱讀更多查看完整內容和原文連結。</p>
+                <a href="/blog/Run-Windows-on-Macbook-M3-pro-如何在Macbook-M3上執行Windows/" class="btn btn-outline-primary">read more</a>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 mb-4 blog-card">
+            <article class="card">
+              <img src="/images/post/post-1.jpg" class="card-img-top" alt="Volvo XC 90 Polestar 升級分享">
+              <div class="card-body">
+                <a href="/categories/technology" class="category-tag">Technology</a>
+                <a href="/blog/Volvo-XC-90-Polestar-升級分享/" class="card-title">Volvo XC 90 Polestar 升級分享</a>
+                <div class="post-meta">
+                  <span>By Kuo</span>
+                  <span class="border-bottom border-primary px-2 mx-1"></span>
+                  <span>August 2025</span>
+                </div>
+                <p class="card-text">Medium文章預覽 - 點擊閱讀更多查看完整內容和原文連結。</p>
+                <a href="/blog/Volvo-XC-90-Polestar-升級分享/" class="btn btn-outline-primary">read more</a>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 mb-4 blog-card">
+            <article class="card">
+              <img src="/images/post/post-2.jpg" class="card-img-top" alt="macos notes pronote">
+              <div class="card-body">
+                <a href="/categories/technology" class="category-tag">Technology</a>
+                <a href="/blog/macos-notes-pronote/" class="card-title">macos notes pronote</a>
+                <div class="post-meta">
+                  <span>By Kuo</span>
+                  <span class="border-bottom border-primary px-2 mx-1"></span>
+                  <span>August 2025</span>
+                </div>
+                <p class="card-text">Medium文章預覽 - 點擊閱讀更多查看完整內容和原文連結。</p>
+                <a href="/blog/macos-notes-pronote/" class="btn btn-outline-primary">read more</a>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 mb-4 blog-card">
+            <article class="card">
+              <img src="/images/post/post-3.jpg" class="card-img-top" alt="skill password">
+              <div class="card-body">
+                <a href="/categories/technology" class="category-tag">Technology</a>
+                <a href="/blog/skill-password/" class="card-title">skill password</a>
+                <div class="post-meta">
+                  <span>By Kuo</span>
+                  <span class="border-bottom border-primary px-2 mx-1"></span>
+                  <span>August 2025</span>
+                </div>
+                <p class="card-text">Medium文章預覽 - 點擊閱讀更多查看完整內容和原文連結。</p>
+                <a href="/blog/skill-password/" class="btn btn-outline-primary">read more</a>
+              </div>
+            </article>
+          </div>
+        </div>
         
-<ul class="pagination">
-  <li class="page-item">
-    <a href="/blog/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
-  </li>
-  <li class="page-item disabled">
-    <a  class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
-  </li>
-  <li class="page-item active">
-    <a class="page-link" href="/blog/">1</a>
-  </li>
-  <li class="page-item">
-    <a class="page-link" href="/blog/page/2/">2</a>
-  </li>
-  <li class="page-item">
-    <a class="page-link" href="/blog/page/3/">3</a>
-  </li>
-  <li class="page-item">
-    <a href="/blog/page/2/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
-  </li>
-  <li class="page-item">
-    <a href="/blog/page/3/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
-  </li>
-</ul>
 
-
+        <!-- pagination -->
+        <ul class="pagination">
+          <li class="page-item active">
+            <span class="page-link">1</span>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="/blog/page/2/">2</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="/blog/page/3/">3</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="/blog/page/2/" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- sidebar -->
+      <div class="col-lg-4">
+        <!-- about -->
+        <div class="widget">
+          <div class="media media-custom d-block">
+            <img src="/images/author.jpg?v=2" alt="Kuo" class="img-fluid">
+            <div class="media-body">
+              <h3 class="mt-0"><a href="/about/">About Me</a></h3>
+              <p>Passionate Data Scientist and Machine Learning Engineer with extensive experience in developing intelligent solutions that transform business operations. Specializing in scalable data pipelines and predictive models.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- social -->
+        <div class="widget">
+          <h4 class="widget-title">Social</h4>
+          <ul class="list-inline social-links">
+            <li class="list-inline-item"><a href="https://github.com/kuonumber"><i class="ti-github"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.linkedin.com/in/kuohaochieh/"><i class="ti-linkedin"></i></a></li>
+            <li class="list-inline-item"><a href="https://medium.com/@kuonumber"><i class="ti-world"></i></a></li>
+          </ul>
+        </div>
+        
+        <!-- categories -->
+        <div class="widget">
+          <h4 class="widget-title">Categories</h4>
+          <ul class="list-inline widget-list-inline">
+            <li class="list-inline-item"><a href="/categories/data-science/">Data Science</a></li>
+            <li class="list-inline-item"><a href="/categories/machine-learning/">Machine Learning</a></li>
+            <li class="list-inline-item"><a href="/categories/python/">Python</a></li>
+            <li class="list-inline-item"><a href="/categories/technology/">Technology</a></li>
+          </ul>
+        </div>
+        
+        <!-- tags -->
+        <div class="widget">
+          <h4 class="widget-title">Tags</h4>
+          <ul class="list-inline widget-list-inline">
+            <li class="list-inline-item"><a href="/tags/python/">Python</a></li>
+            <li class="list-inline-item"><a href="/tags/machine-learning/">Machine Learning</a></li>
+            <li class="list-inline-item"><a href="/tags/data-science/">Data Science</a></li>
+            <li class="list-inline-item"><a href="/tags/technology/">Technology</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-
-
-
 <footer>
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-12 text-center mb-5">
-        <a href="https://kuonumber.github.io"><img src="https://kuonumber.github.io/images/logo.png" alt="Hao-Chieh Kuo Blog"></a>
+        <a href="/"><img src="/images/logo.png" alt="Kuo's Blog" width="50"></a>
       </div>
-               
       <div class="col-lg-3 col-sm-6 mb-5">
-        <h6 class="mb-4">Contact Me</h6>
-        <ul class="list-unstyled">
-          
-          <li class="mb-3"><a class="text-dark" href="tel:0124857985320"><i
-                class="ti-mobile mr-3 text-primary"></i>0124857985320</a></li>
-          
-                     
-          <li class="mb-3"><i class="ti-location-pin mr-3 text-primary"></i>Dhaka, Bangladedsh</li>
-          
-                     
-          <li class="mb-3"><a class="text-dark" href="mailto:demo@email.com"><i
-                class="ti-email mr-3 text-primary"></i>demo@email.com</a>
-          
-          </li>
-        </ul>
-      </div>
-      
-      <div class="col-lg-3 col-sm-6 mb-5">
-        <h6 class="mb-4">Social Contacts</h6>
-        <ul class="list-unstyled">
-          
-          <li class="mb-3"><a class="text-dark" href="#">github</a></li>
-          
-          <li class="mb-3"><a class="text-dark" href="#">linkedin</a></li>
-          
+        <h6 class="mb-4">Quick Links</h6>
+        <ul class="list-unstyled footer-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/contact/">Contact</a></li>
         </ul>
       </div>
       <div class="col-lg-3 col-sm-6 mb-5">
         <h6 class="mb-4">Categories</h6>
-        <ul class="list-unstyled">
-          <li class="mb-3"><a class="text-dark"
-              href="/categories/android-and-gaming">Android and gaming</a>
-          </li>
-          <li class="mb-3"><a class="text-dark"
-              href="/categories/go-language">Go language</a>
-          </li>
-          <li class="mb-3"><a class="text-dark"
-              href="/categories/html">Html</a>
-          </li>
-          <li class="mb-3"><a class="text-dark"
-              href="/categories/html-css">Html css</a>
-          </li>
-          <li class="mb-3"><a class="text-dark"
-              href="/categories/programming-language">Programming language</a>
-          </li>
-          <li class="mb-3"><a class="text-dark"
-              href="/categories/python">Python</a>
-          </li>
-          <li class="mb-3"><a class="text-dark"
-              href="/categories/web-design">Web design</a>
-          </li>
+        <ul class="list-unstyled footer-list">
+          <li><a href="/categories/data-science/">Data Science</a></li>
+          <li><a href="/categories/machine-learning/">Machine Learning</a></li>
+          <li><a href="/categories/python/">Python</a></li>
+          <li><a href="/categories/technology/">Technology</a></li>
         </ul>
       </div>
       <div class="col-lg-3 col-sm-6 mb-5">
-        <h6 class="mb-4">Quick Links</h6>
-        <ul class="list-unstyled">
-          
-          <li class="mb-3"><a class="text-dark" href="https://kuonumber.github.io/about">About</a></li>
-          
-          <li class="mb-3"><a class="text-dark" href="https://kuonumber.github.io/blog">Post</a></li>
-          
-          <li class="mb-3"><a class="text-dark" href="https://kuonumber.github.io/contact">Contact</a></li>
-          
+        <h6 class="mb-4">Contact Info</h6>
+        <ul class="list-unstyled footer-list">
+          <li>台中, 台灣</li>
+          <li>v7368858@gmail.com</li>
         </ul>
       </div>
-      <div class="col-12 border-top py-4 text-center">
-        | copyright © 2020 <a href="https://themefisher.com">Themefisher</a> All Rights Reserved |
+      <div class="col-lg-3 col-sm-6 mb-5">
+        <h6 class="mb-4">Social</h6>
+        <ul class="list-inline social-links">
+          <li class="list-inline-item"><a href="https://github.com/kuonumber"><i class="ti-github"></i></a></li>
+          <li class="list-inline-item"><a href="https://www.linkedin.com/in/kuohaochieh/"><i class="ti-linkedin"></i></a></li>
+          <li class="list-inline-item"><a href="https://medium.com/@kuonumber"><i class="ti-world"></i></a></li>
+        </ul>
       </div>
+    </div>
+    <div class="border-top text-center border-dark py-5">
+      <p class="mb-0 text-light">Copyright ©<script>
+          var CurrentYear = new Date().getFullYear()
+          document.write(CurrentYear)
+        </script> Kuo's Blog. All rights reserved.</p>
     </div>
   </div>
 </footer>
 
-<script>
-  var indexURL = "https://kuonumber.github.io/index.json"
-</script>
-
-<!-- JS Plugins -->
-
-<script src="https://kuonumber.github.io/plugins/jQuery/jquery.min.js"></script>
-
-<script src="https://kuonumber.github.io/plugins/bootstrap/bootstrap.min.js"></script>
-
-<script src="https://kuonumber.github.io/plugins/slick/slick.min.js"></script>
-
-<script src="https://kuonumber.github.io/plugins/venobox/venobox.min.js"></script>
-
-<script src="https://kuonumber.github.io/plugins/search/fuse.min.js"></script>
-
-<script src="https://kuonumber.github.io/plugins/search/mark.js"></script>
-
-<script src="https://kuonumber.github.io/plugins/search/search.js"></script>
-
-<!-- Main Script -->
-
-<script src="https://kuonumber.github.io/js/script.min.js"></script>
-
-
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
-<div id="js-cookie-box" class="cookie-box cookie-box-hide">
-	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
-</div>
-<script>
-	(function ($) {
-		const cookieBox = document.getElementById('js-cookie-box');
-		const cookieButton = document.getElementById('js-cookie-button');
-		if (!Cookies.get('cookie-box')) {
-			cookieBox.classList.remove('cookie-box-hide');
-			cookieButton.onclick = function () {
-				Cookies.set('cookie-box', true, {
-					expires:  2 
-				});
-				cookieBox.classList.add('cookie-box-hide');
-			};
-		}
-	})(jQuery);
-</script>
-
-
-<style>
-.cookie-box {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  text-align: center;
-  z-index: 9999;
-  padding: 1rem 2rem;
-  background: rgb(71, 71, 71);
-  transition: all .75s cubic-bezier(.19, 1, .22, 1);
-  color: #fdfdfd;
-}
-
-.cookie-box-hide {
-  display: none;
-}
-</style>
+<!-- jQuery -->
+<script src="/plugins/jQuery/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="/plugins/bootstrap/bootstrap.min.js"></script>
+<!-- slick slider -->
+<script src="/plugins/slick/slick.min.js"></script>
+<!-- venobox -->
+<script src="/plugins/venobox/venobox.min.js"></script>
+<!-- filter -->
+<script src="/plugins/filterizr/jquery.filterizr.min.js"></script>
+<!-- google map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpW/7pVu2MM6yq0M"></script>
+<script src="/plugins/google-map/gmap.js"></script>
+<!-- custom js -->
+<script src="/js/script.min.js"></script>
 </body>
 </html>
