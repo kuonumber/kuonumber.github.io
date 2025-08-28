@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Science - Kuo's Blog</title>
+  <link rel="icon" href="/images/favicon.png">
+  <link rel="stylesheet" href="/plugins/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="/plugins/themify-icons/themify-icons.css">
+  <link rel="stylesheet" href="/scss/style.min.css">
+  <style>
+    .section { padding: 24px 0; }
+    .blog-card { height: 100%; display:flex; flex-direction:column; }
+    .blog-card .card { height: 100%; border: 1px solid #e9ecef; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all .3s ease; }
+    .blog-card .card:hover { box-shadow: 0 4px 10px rgba(0,0,0,0.15); transform: translateY(-2px); }
+    .blog-card .card-img-top { height: 200px; object-fit: cover; }
+    .blog-card .card-body { padding: 1rem 1.25rem; display:flex; flex-direction:column; }
+    .category-tag { display:inline-block; background:#007bff; color:#fff; padding:.25rem .5rem; border-radius:12px; font-size:.8rem; margin-bottom:.5rem; text-decoration:none; }
+  </style>
+</head>
+<body>
+  <header class="navigation">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-0">
+        <a class="navbar-brand" href="/"><img src="/images/logo.png" alt="Kuo's Blog" width="120"></a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <h1 class="h3 mb-4">Data Science</h1>
+      <div id="posts" class="row"></div>
+      <div id="emptyNote" class="text-muted">Loading posts...</div>
+    </div>
+  </section>
+
+  <footer class="text-center py-5 border-top">
+    <a href="/">Back to Home</a>
+  </footer>
+
+  <script>
+  (function(){
+    const targets = ['/blog/','/blog/page/2/','/blog/page/3/'];
+    const postsEl = document.getElementById('posts');
+    const emptyEl = document.getElementById('emptyNote');
+    const parser = new DOMParser();
+    const seen = new Set();
+
+    function extract(doc){
+      const cards = [];
+      doc.querySelectorAll('.blog-card').forEach(card => {
+        const tagEl = card.querySelector('.category-tag');
+        if(tagEl && /data\s*science/i.test(tagEl.textContent.trim())){
+          const link = card.querySelector('.card-title');
+          const img = card.querySelector('img.card-img-top');
+          if(link && !seen.has(link.href)){
+            seen.add(link.href);
+            cards.push({
+              href: link.getAttribute('href'),
+              title: link.textContent.trim(),
+              img: img ? img.getAttribute('src') : '/images/post/post-1.jpg',
+              date: (card.querySelector('.post-meta span:last-child')||{}).textContent || ''
+            });
+          }
+        }
+      });
+      return cards;
+    }
+
+    Promise.all(targets.map(url => fetch(url).then(r=>r.text()).catch(()=>'')))
+      .then(htmls => {
+        const posts = htmls.flatMap(html => html ? extract(parser.parseFromString(html,'text/html')) : []);
+        postsEl.innerHTML = posts.map(p => `
+          <div class="col-md-6 mb-4 blog-card">
+            <article class="card">
+              <img src="${p.img}" class="card-img-top" alt="${p.title}">
+              <div class="card-body">
+                <a class="category-tag" href="/categories/data-science/">Data Science</a>
+                <a class="card-title" href="${p.href}">${p.title}</a>
+                <div class="post-meta text-muted" style="font-size:.9rem">${p.date}</div>
+                <a class="btn btn-outline-primary mt-auto" href="${p.href}">read more</a>
+              </div>
+            </article>
+          </div>
+        `).join('');
+        emptyEl.style.display = posts.length ? 'none' : 'block';
+        if(!posts.length){
+          emptyEl.textContent = 'No posts found in Data Science.';
+        }
+      })
+      .catch(()=>{ emptyEl.textContent = 'Failed to load posts.'; });
+  })();
+  </script>
+
+  <script src="/plugins/jQuery/jquery.min.js"></script>
+  <script src="/plugins/bootstrap/bootstrap.min.js"></script>
+</body>
+</html>
